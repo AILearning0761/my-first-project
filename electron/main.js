@@ -1,4 +1,5 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, dialog } from "electron";
+import { existsSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -21,7 +22,18 @@ const createWindow = () => {
     mainWindow.loadURL("http://localhost:5173");
     mainWindow.webContents.openDevTools({ mode: "detach" });
   } else {
-    mainWindow.loadFile(path.join(__dirname, "../dist/index.html"));
+    const indexPath = path.join(__dirname, "../dist/index.html");
+
+    if (!existsSync(indexPath)) {
+      dialog.showErrorBox(
+        "Renderer build missing",
+        "We could not find dist/index.html. Run `npm run build` before starting Electron."
+      );
+      app.quit();
+      return;
+    }
+
+    mainWindow.loadFile(indexPath);
   }
 };
 
