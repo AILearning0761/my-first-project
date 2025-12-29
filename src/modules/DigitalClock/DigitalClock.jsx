@@ -17,7 +17,7 @@ const formatTime = (date, format) => {
 };
 
 const DigitalClock = ({ config }) => {
-  const { format = "HH:mm", showDate = false } = config || {};
+  const { format = "HH:mm", showDate = false, location } = config || {};
   const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
@@ -37,6 +37,7 @@ const DigitalClock = ({ config }) => {
           })}
         </div>
       )}
+      {location && <div className="digital-clock__location">{location}</div>}
     </div>
   );
 };

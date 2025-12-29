@@ -23,7 +23,8 @@
       "region": "top_right",
       "config": {
         "format": "HH:mm:ss",
-        "showDate": true
+        "showDate": true,
+        "location": "Seattle, WA"
       }
     }
   ]

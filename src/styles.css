@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
 :root {
   color-scheme: dark;
 }
@@ -9,7 +11,8 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "SF Pro Display", "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
   background: #000000;
   color: #ffffff;
   height: 100vh;
@@ -101,4 +104,11 @@ body {
   font-size: 1rem;
   opacity: 0.8;
   margin-top: 8px;
+}
+
+.digital-clock__location {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-top: 6px;
+  letter-spacing: 0.04rem;
 }
