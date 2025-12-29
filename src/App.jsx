@@ -1,5 +1,5 @@
 import React from "react";
-import ModuleLoader from "./moduleLoader.js";
+import ModuleLoader from "./ModuleLoader.jsx";
 import config from "../config/config.json";
 
 const App = () => {
