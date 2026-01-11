@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", "SF Pro Display", "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  background: #000000;
+  color: #ffffff;
+  height: 100vh;
+}
+
+.mirror-shell {
+  height: 100vh;
+  width: 100vw;
+  background: #000000;
+  color: #ffffff;
+}
+
+.mirror-layout {
+  display: grid;
+  grid-template-areas:
+    "top_left top_bar top_right"
+    "center center center"
+    "bottom_left bottom_bar bottom_right";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  padding: 32px;
+  gap: 24px;
+}
+
+.region {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.region-top_left {
+  grid-area: top_left;
+  align-items: flex-start;
+}
+
+.region-top_bar {
+  grid-area: top_bar;
+  align-items: center;
+}
+
+.region-top_right {
+  grid-area: top_right;
+  align-items: flex-end;
+}
+
+.region-center {
+  grid-area: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.region-bottom_left {
+  grid-area: bottom_left;
+  align-items: flex-start;
+}
+
+.region-bottom_bar {
+  grid-area: bottom_bar;
+  align-items: center;
+}
+
+.region-bottom_right {
+  grid-area: bottom_right;
+  align-items: flex-end;
+}
+
+.module {
+  text-align: inherit;
+}
+
+.module-loading,
+.missing {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.digital-clock {
+  text-align: right;
+}
+
+.digital-clock__time {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.digital-clock__date {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+.digital-clock__location {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-top: 6px;
+  letter-spacing: 0.04rem;
+}
